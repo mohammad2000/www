@@ -1,0 +1,258 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>برنامه نجوا</title>
+<link href="jquery.mobile-1.0a3.min.css" rel="stylesheet" type="text/css"/>
+<script src="jquery-1.5.min.js" type="text/javascript"></script>
+<script src="jquery.mobile-1.0a3.min.js" type="text/javascript"></script>
+<!-- This reference to phonegap.js will allow for code hints as long as the current site has been configured as a mobile application. 
+	 To configure the site as a mobile application, go to Site -> Mobile Applications -> Configure Application Framework... -->
+<script src="/phonegap.js" type="text/javascript"></script>
+<script>
+	function loadtxt(names) {
+		$("#matn").html('لطفا چند لحظه صبر کنید<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>');
+		$("#matn").load('docs/' + names + '.txt');
+	}
+$(document).ready(function(e) {
+	
+	$("#slider-dua").change(function(e) {
+		  var slider_value = $("#slider-0").val();
+		$("h2").css('font-size', parseInt(slider_value));
+	});
+	
+	$("#slider-farsi").change(function(e) {
+		  var slider_value = $("#slider-1").val();
+		$("h3").css('font-size', parseInt(slider_value));
+	});
+
+	$("#slider-farsi").change(function(e) {
+		  var slider_value = $("#slider-1").val();
+		$("h3").css('font-size', parseInt(slider_value));
+		});
+		$("#farsiornot").change(function(e) {
+		 // var slider_value = $("#slider-1").val();
+		if ($("#flipswitch").val()=="off"){
+		$("h3").css('display', 'none');
+		}
+		if ($("#flipswitch").val()=="on"){
+		$("h3").css('display', 'block');
+		}
+	});
+
+
+});
+</script>
+
+	<style type="text/css">
+		@font-face {
+			font-family: "BBadr";
+			src: url('Fonts/BBadr.eot');
+			src: url('Fonts/BBadr.ttf') format("truetype"),  
+				 url('Fonts/BBadr.eot?#iefix') format('embedded-opentype'),
+				 url('BBadr.woff') format("woff");
+			font-style: normal;
+
+					}
+				@font-face {
+			font-family: "BYagut";
+			src: url('Fonts/BYagut.eot');
+			src: url('Fonts/BYagut.ttf') format("truetype"),  
+				 url('Fonts/BYagut.eot?#iefix') format('embedded-opentype'),
+				 url('BYagut.woff') format("woff");
+			font-style: normal;
+
+					}
+		@font-face {
+			font-family: "BYekan";
+			src: url('Fonts/BYekan.eot');
+			src: url('Fonts/BYekan.ttf') format("truetype"),  
+				 url('Fonts/BYekan.eot?#iefix') format('embedded-opentype'),
+				 url('BYekan.woff') format("woff");
+			font-style: normal;
+
+					}
+h2 {
+	font-family: BYagut;
+	color: #000;
+	font-size:25px;
+	alignment-adjust:!important;
+	line-height:140%;
+
+}
+
+h3 {
+	font-family: BYekan;
+	color: #AD5C14;
+	line-height:100%;
+	border-bottom-width: 1px;
+	font-size:12px;
+	border-bottom-style: solid;
+	border-bottom-color: #999;
+	padding-bottom: 14px;
+}
+		* {
+    text-shadow: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+-webkit-touch-callout: none;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+-webkit-text-size-adjust: none;
+-webkit-user-select: none;
+}
+	</style>
+    
+
+</head> 
+<body> 
+
+<div data-role="page" id="page"  >
+	<div data-role="header" data-theme="b" data-backbtn="false" >
+<div data-role="navbar">
+          <ul>
+            <li><a href="#page" data-icon="home" data-transition="none" class="ui-btn-active ui-state-persist">خانه</a></li>
+            <li><a href="#page4" data-icon="info"data-transition="none" >درباره ما</a></li>
+          </ul>
+        </div>	</div>
+	<div data-role="content" >	
+  <br><br><br>
+	  <div  data-role="collapsible-set" >
+      	    <div data-role="collapsible" data-theme="c">
+        
+	      <h4>مناجات</h4>
+                <a href="#page2" data-role="button" onclick="loadtxt('Mtobe');" data-transition="none" >مناجات توبه کنندگان</a>
+                <a href="#page2" data-role="button" onclick="loadtxt('Mshekve');" data-transition="none" >مناجات شکوه کنندگان</a>
+                <a href="#page2" data-role="button" onclick="loadtxt('Mkhaef');" data-transition="none" >مناجات خائفان</a>
+                <a href="#page2" data-role="button" onclick="loadtxt('Momidvar');" data-transition="none" >مناجات امیدواران</a>
+                <a href="#page2" data-role="button" onclick="loadtxt('Mmoshtaq');" data-transition="none" >مناجات مشتاقان</a>
+                <a href="#page2" data-role="button" onclick="loadtxt('Msepas');" data-transition="none" >مناجات سپاسگزاران</a>
+                <a href="#page2" data-role="button" onclick="loadtxt('Mfarman');" data-transition="none" >مناجات فرمانبرداران</a>
+
+        </div>
+	    <div data-role="collapsible" data-theme="c">
+        
+	      <h4>ادعیه</h4>
+                <a href="#page2" data-role="button" onclick="loadtxt('komeil');" data-transition="none" >دعای کمیل</a>
+                <a href="#page2" data-role="button" onclick="loadtxt('nodbe');" data-transition="none" >دعای ندبه</a>
+                <a href="#page2" data-role="button" onclick="loadtxt('samat');" data-transition="none" >دعای سمات</a>
+                <a href="#page2" data-role="button" onclick="loadtxt('tavassol');" data-transition="none" >دعای توسل</a>
+                <a href="#page2" data-role="button" onclick="loadtxt('faraj');" data-transition="none" >دعای فرج</a>
+	     </div>
+     	    <div data-role="collapsible" data-theme="c">
+        
+      <h4>زیارات</h4>
+                <a href="#page2" data-role="button" onclick="loadtxt('ashura');" data-transition="none" >زیارت عاشورا</a>
+                <a href="#page2" data-role="button" onclick="loadtxt('yasin');" data-transition="none" >زیارت یاسین</a>
+                <a href="#page2" data-role="button" onclick="loadtxt('aminollah');" data-transition="none" >زیارت امین الله</a>
+     </div>
+
+
+<div data-role="collapsible" data-theme="c" >
+        
+	      <h4>روایت</h4>
+                <a href="#page2" data-role="button" onclick="loadtxt('1ta100');" data-transition="none" >نهج البلاغه جملات یک تا صد</a>
+
+        </div>
+        	    <div data-role="collapsible" data-theme="c" >
+	      <h4>تعقیبات</h4>
+                <a href="#page2" data-role="button" onclick="loadtxt('Tsobh');" data-transition="none" >نماز صبح</a>
+                <a href="#page2" data-role="button" onclick="loadtxt('Tzohr');" data-transition="none" >نماز ظهر</a>
+                <a href="#page2" data-role="button" onclick="loadtxt('Tasr');" data-transition="none" >نماز عصر</a>
+                <a href="#page2" data-role="button" onclick="loadtxt('Tmaghreb');" data-transition="none" >نماز مغرب</a>
+                <a href="#page2" data-role="button" onclick="loadtxt('Tesha');" data-transition="none" >نماز عشاء</a>
+ 		</div>
+      </div>
+      <br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
+
+      
+      
+	</div>
+
+
+</div>
+
+<div data-role="page" id="page2">
+	<div data-role="header" data-theme="b">
+		<h1>نمایش متن</h1>
+		<a href="#page" data-role="button"  data-transition="none" data-icon="arrow-l">بازگشت</a>
+        <a href="#page3" data-role="button"  data-transition="none" data-icon="gear" data-iconpos="right">تنظیمات</a>
+    </div>
+	<div data-role="content">	
+		<div id="matn" align="right" style="text-align:right; direction:rtl">لطفا صبر کنید</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	</div>
+	<div data-role="header" data-theme="b">
+		<h1>التماس دعا</h1>
+		<a href="#page" data-role="button"  data-transition="none" data-icon="arrow-l">بازگشت</a>
+                <a href="#page3" data-role="button"  data-transition="none"  data-icon="gear" data-iconpos="right">تنظیمات</a>
+
+    </div>
+</div>
+
+<div data-role="page" id="page3" data-theme="b">
+	<div data-role="header" >
+		<h1>تنظیمات</h1>
+		<a href="#page2" data-role="button"  data-transition="none" data-icon="arrow-l">بازگشت</a>
+    </div>
+<div data-role="content" dir="rtl" role="main" data-theme="c" >
+    <br>
+  <br>
+<div id="slider-dua">   <label for="slider-0">فونت دعا:</label>
+   <input type="range" name="slider" id="slider-0" value="25" min="10" max="36" step="2" dir="ltr" />
+</div>  
+<div align="center"><h2>بِسْمِ اللّهِ الرَّحْمنِ الرَّحیمِ</h2></div>
+   <hr>
+   
+     <div data-role="fieldcontain" id="farsiornot" >
+    <label for="flipswitch">نمایش ترجمه:</label>
+    <select name="flipswitch" id="flipswitch" data-role="slider">
+           <option value="on">بله</option>
+            <option value="off">خیر</option>
+    </select>
+  </div>
+  <hr>
+<div id="slider-farsi">     <label for="slider-0">ترجمه دعا:</label>
+   <input type="range" name="slider" id="slider-1" value="12" min="10" max="36" step="2" dir="ltr" /></div>
+<div align="center"><h3>به نام خداوند بخشایش گر مهربان</h3>
+</div>
+
+  </div>
+<br><br><br><br><br>
+</div>
+
+
+<div data-role="page" id="page4" >
+    <div data-role="header" data-backbtn="false" data-theme="b" >
+<div data-role="navbar">
+      <ul>
+        <li><a href="#page" data-icon="home" data-transition="none">خانه</a></li>
+        <li><a href="#page4" data-icon="info"data-transition="none" class="ui-btn-active ui-state-persist">درباره ما</a></li>
+      </ul>
+    </div>
+    <!-- /navbar --> 
+  </div>    
+    <div data-role="content" >
+    <br><br><br>
+
+<div style=" direction:rtl">با تشکر از تمامی دوستانی که برنامه حاضر را انتخاب و نصب کردند. از آنجایی که برنامه در نسخه های ابتدایی خود میباشد از تمامی دوستان تقاضا میکنیم نقطه نظرات و انتقادات خود را از طریق ایمیل با برنامه نویس در میان بگذارید.<br>
+امیدوارم به زودی بتوانیم امکانات جالب و جذابی را در برنامه حاضر قرار دهیم و رضایت شما عزیزان را فراهم کنیم.</div><br><br><br>
+      <div align="right" dir="rtl">برنامه نویس: محمد معلی
+      <br>....ایمیل: mh.moalla@gmail.com
+      <br>
+      گرافیک: حسن الماسی
+      <br>....ایمیل:hasanalmasi@ymail.com
+      
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      </div>	</div>
+  </br>
+  
+  </div>
+  
+  
+
+
+
+
+
+</body>
+</html>
